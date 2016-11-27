@@ -11,13 +11,27 @@
     tools:context="com.example.piotr.sumitotest.MainActivity">
 
 
-    <TextView
-        android:text="Tutaj będzie lista!"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="102dp"
+        android:id="@+id/client_list_spinner" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/client_list_spinner"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="115dp"
-        android:id="@+id/textView"
-        android:textSize="30dp" />
+        android:layout_marginTop="33dp"
+        android:id="@+id/project_list_spinner" />
+
+    <Button
+        android:text="SHOW LIST OF EMPLOYEES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/project_list_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:id="@+id/get_list_button" />
 </RelativeLayout>

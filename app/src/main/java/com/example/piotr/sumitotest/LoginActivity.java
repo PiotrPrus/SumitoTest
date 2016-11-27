@@ -3,6 +3,7 @@ package com.example.piotr.sumitotest;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -48,18 +49,24 @@ public class LoginActivity extends AppCompatActivity {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Toast.makeText(LoginActivity.this, "Username or password are not correct",
-                        Toast.LENGTH_LONG).show();
+                e.printStackTrace();
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                if (response.isSuccessful()) {
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                } else {
+                    alertAboutError();
+                }
             }
         });
+    }
+//TODO Fix the alertAboutError method to do not crush the APP. Probalby something is wrong with Toast!!
+    public void alertAboutError() {
+        Toast.makeText(getApplicationContext(), "Wrong login or password. Try again.",
+                Toast.LENGTH_SHORT).show();
     }
 }
 
