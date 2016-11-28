@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-//TODO Fix the alertAboutError method to do not crush the APP. Probalby something is wrong with Toast!!
+//TODO Fix the alertAboutError method to do not crush the APP. Probably something is wrong with Toast!!
     public void alertAboutError() {
         Toast.makeText(getApplicationContext(), "Wrong login or password. Try again.",
                 Toast.LENGTH_SHORT).show();
