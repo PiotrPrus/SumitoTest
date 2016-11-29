@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openEmployeesListActivity(View view) {
 
-        Intent intent = new Intent(this, EmployeesListActivity.class);
+        Intent intent = new Intent(this, ListActivity.class);
         startActivity(intent);
     }
 

@@ -7,19 +7,17 @@
     android:paddingBottom="10dp">
 
     <TextView
-        android:layout_width="25sp"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
-        android:text="ID: "
-        android:textSize="20sp"/>
-
-    <TextView
         android:id="@+id/list_text_view"
         android:layout_width="25sp"
         android:layout_height="match_parent"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="25sp"
+        android:layout_height="match_parent"
+        android:id="@+id/uuid_text_view"
+        android:layout_marginLeft="50sp"/>
 
 </LinearLayout>

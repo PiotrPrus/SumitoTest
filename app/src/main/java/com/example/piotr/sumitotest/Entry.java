@@ -1,25 +1,27 @@
 package com.example.piotr.sumitotest;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Piotr on 28.11.2016.
  */
 
 public class Entry {
+    @SerializedName("id")
+    private int employeeId;
+    @SerializedName("uuid")
+    private String uuid;
 
-    private int mEmployeeId;
-    private String mUuid;
-
-    public Entry(int employeeId, String uuid){
-
-        mEmployeeId = employeeId;
-        mUuid = uuid;
+    public Entry (int employeeId, String uuid){
+        this.uuid = uuid;
+        this.employeeId = employeeId;
     }
 
     public int getEmployeeId() {
-        return mEmployeeId;
+        return employeeId;
     }
 
     public String getUuid() {
-        return mUuid;
+        return uuid;
     }
 }
